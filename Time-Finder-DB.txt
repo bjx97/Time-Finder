@@ -1,0 +1,22 @@
+CREATE TABLE "USER_INFO_TABLE"
+(
+    "USER_ID" integer NOT NULL,
+    "USERNAME" character varying(100) NOT NULL,
+    "FIRSTNAME" character varying(100) NOT NULL,
+    "LASTNAME" character varying(100) NOT NULL,
+    "AGE" integer NOT NULL,
+    "EMAIL_ADDRESS" character varying(100) NOT NULL,
+    "PASSWORD" character varying(100) NOT NULL,
+    "DATE_JOINED" time with time zone NOT NULL,
+    PRIMARY KEY ("USERNAME", "USER_ID")
+);
+
+CREATE TABLE "TIME_TABLE"
+(
+    "TIME_ID" integer NOT NULL,
+    "USERNAME" character varying(100) NOT NULL,
+    "DAY_NAME" character varying(50) NOT NULL,
+    "TIME_RANGE" numrange NOT NULL,
+    "ACTIVITY" character varying(100) NOT NULL,
+    PRIMARY KEY ("DAY_NAME", "TIME_RANGE", "ACTIVITY")
+);
